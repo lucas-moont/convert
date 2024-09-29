@@ -13,10 +13,20 @@ form.addEventListener('submit', event => {
   const result = document.querySelector('#result')
   const footer = document.querySelector('footer')
 
-  if(currency === 'USD'){
-    const conversion = Number(amount.value) * 5.43
-    description.innerHTML = `US$ 1 = R$ 5,43`
-    result.innerHTML = `${String(conversion).replace('.', ',')} Reais` 
-    footer.style.display = 'block';
+
+  if(currency !== ''){
+    if(currency === 'USD'){
+      const conversion = Number(amount.value) * 5.43
+      description.innerHTML = `US$ 1 = R$ 5,43`
+      result.innerHTML = `${String(conversion.toFixed(2)).replace('.', ',')} Reais` 
+      footer.style.display = 'block'
+    }
+  
+    if(currency === 'EUR'){
+      const conversion = Number(amount.value) * 6.01
+      description.innerHTML = `EUR$ 1 = R$ 6,01`
+      result.innerHTML = `${String(conversion.toFixed(2)).replace('.', ',')} Reais` 
+      footer.style.display = 'block';
+    }
   }
 })
