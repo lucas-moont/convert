@@ -33,7 +33,7 @@ body {
   justify-content: center;
   flex-direction: column;
 
-  gap: 3.12rem;
+  gap: 2rem;
 
   color: #f1f2f6;
 }
@@ -44,6 +44,7 @@ main {
 
   border: 1px solid #2f3279;
   overflow-y: hidden;
+  max-height: fit-content;
 }
 
 form {
@@ -52,7 +53,7 @@ form {
   display: flex;
   flex-direction: column;
 
-  padding: 3.5rem 4rem;
+  padding: 1rem 2rem;
 }
 
 label {
@@ -132,7 +133,7 @@ button:focus {
 
 footer {
   background-color: #1f2151;
-  padding: 2.5rem;
+  padding: 16px;
   max-height: 196px;
 
   text-align: center;
